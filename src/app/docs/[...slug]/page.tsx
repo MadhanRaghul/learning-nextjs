@@ -4,7 +4,7 @@ export default function Docs({ params }:{
     }
 }){
     if(params.slug.length === 2){
-        return <h2>Viewing docs for {params.slug[0]} and concept {params.slug[1]} years old</h2>
+        return <h2>Viewing docs for {params.slug[0]} and concept {params.slug[1]}</h2>
     } else if(params.slug.length === 1){
         return <h2>Viewing docs for {params.slug[0]}</h2>
     }
