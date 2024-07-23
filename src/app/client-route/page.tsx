@@ -1,14 +1,17 @@
 "use client"
 
+import { useTheme } from "@/components/theme-provider"
 import { serverSideFuntion } from "../utils/server-utils"
 
 export default function ClientRendering(){
-    console.log('This is public')
-    const result = serverSideFuntion()
+    const theme = useTheme()
+    const settings = {
+        dots: true,
+    }
+
     return(
         <>
-            <h1>CLIENT</h1>
-            <p>{result}</p>
+            <h1 style={{color: theme.colors.primary}}>CLIENT</h1>
         </>
     )
 }
