@@ -1,3 +1,4 @@
+import './styles/global.css' //how does it work??
 import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata = {
@@ -16,11 +17,11 @@ export default function RootLayout({
       <ThemeProvider>
         <body>
           <header>
-            <h1 style={{color: "white", backgroundColor: "lightblue", padding: 10}}>Header</h1>
+            <h1 className=" font-bold text-xl text-white bg-blue-300 p-5">Header</h1>
           </header>
         {children}
         <footer>
-          <h1 style={{color: "white", backgroundColor: "lavender", padding: 10}}>Footer</h1>
+          <h1 className=" font-bold text-xl text-white bg-purple-200 p-5">Footer</h1>
         </footer>  
         </body>
       </ThemeProvider>
