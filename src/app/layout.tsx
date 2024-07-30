@@ -1,3 +1,4 @@
+import { ReduxProvider } from '@/redux/provider'
 import './styles/global.css' //how does it work??
 import { ThemeProvider } from "@/components/theme-provider"
 
@@ -19,7 +20,11 @@ export default function RootLayout({
           <header>
             <h1 className=" font-bold text-xl text-white bg-blue-300 p-5">Header</h1>
           </header>
-        {children}
+
+          <ReduxProvider>
+            {children}
+          </ReduxProvider>
+        
         <footer>
           <h1 className=" font-bold text-xl text-white bg-purple-200 p-5">Footer</h1>
         </footer>  
